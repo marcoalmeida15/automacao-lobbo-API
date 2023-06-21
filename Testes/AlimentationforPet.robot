@@ -11,6 +11,7 @@ Cenário 02 - Put alimentation
 Cenário 03 - Delete alimentation
     Deletando alimentação
 
+Cenário 04 - Get Pet Id Alimentation
     Pegando histórico de alimentação 
 
 Cenário 05 - GetAllSize
