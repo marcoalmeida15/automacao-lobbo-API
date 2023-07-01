@@ -36,3 +36,18 @@ Criando Observação
     ${header}    Create Dictionary    Accept=application/json    Authorization=${token}
     ${data}      Create Dictionary   observation=Ele está mal
     ${response}    PUT On Session    alias=Lobbo    url=/pet/observation/${petId}    headers=${header}    json=${data}    expected_status=200
+
+Adicionando usuário para o pet
+    Create Session    alias=Lobbo    url=${server}
+    ${headers}    Create Dictionary    Accept=application/json    Authorization=${token}
+    ${response}    PATCH On Session    alias=Lobbo    url=/pet/29/add/179    headers=${headers}    expected_status=200
+
+Rejeitando usuário para o pet
+    Create Session    alias=Lobbo    url=${server}
+    ${headers}    Create Dictionary    Accept=application/json    Authorization=${token}
+    ${response}    PATCH On Session    alias=Lobbo    url=/pet/29/reject/179    headers=${headers}    expected_status=200
+
+Removendo usuário para o pet
+    Create Session    alias=Lobbo    url=${server}
+    ${headers}    Create Dictionary    Accept=application/json    Authorization=${token}
+    ${response}    PATCH On Session    alias=Lobbo    url=/pet/29/remove/3    headers=${headers}    expected_status=200

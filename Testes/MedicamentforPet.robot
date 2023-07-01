@@ -11,5 +11,5 @@ Cenário 02 - Get Medicament
 Cenário 03 - Put Medicament
     Atualizando medicamento
 
-Cenário 03 - Delete Medicament
+Cenário 04 - Delete Medicament
     Deletando medicamento

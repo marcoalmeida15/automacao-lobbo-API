@@ -14,7 +14,7 @@ ${userId2}               30
 Criando invite
     Create Session    alias=Lobbo    url=${server}
     ${header}    Create Dictionary    Accept=application/json    Authorization=${token}
-    ${data}      Create Dictionary    petId=29    typeNotification=ANTIFLEA_DAY    userIdReceive=33    userIdSend=31
+    ${data}      Create Dictionary    petId=29    typeNotification=ANTIFLEA_DAY    userIdReceive=3    userIdSend=31
     ${response}    POST On Session    alias=Lobbo    url=/notification/invite   headers=${header}    json=${data}    expected_status=200
 
 Marcar como lido
