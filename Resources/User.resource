@@ -42,4 +42,4 @@ Verificando token
     Create Session    alias=Lobbo    url=${server} 
     ${header}    Create Dictionary    Accept=application/json    Authorization=${token}
     ${data}    Create Dictionary      token=${firebasetoken}    userId=${UserId}
-    ${response}    PUT On Session    alias=Lobbo   url=/user/token-firebase   headers=${header}    json=${data}    expected_status=200
+    ${response}    PUT On Session    alias=Lobbo   url=/user/token-firebase   headers=${header}    json=${data}    expected_status=

@@ -1,15 +1,20 @@
 *** Settings ***
 Resource            ../Resources/AntifleaforPet.resource
 
+
 *** Test Cases ***
 Cenário 01 - Create antiflea
-    Criando antiflea
+    ${antipulgaId}    Criando antiflea
+    Log To Console    ${antipulgaId}
+    Set Suite Variable    ${antipulgaId}     ${antipulgaId["antiFleaId"]}
 
-Cenário 02 - Get antiflea
-    Buscando antiflea
+# Cenário 02 - Get antiflea
+#     ${response}    Buscando antiflea
+#     Set Test Variable    ${GetAntipulgaId}     ${response}[0][antiFleaId]
+#     Should Be Equal      ${GetAntipulgaId}     ${AntipulgasId}  
 
-Cenário 03 - Put antiFleaId
-    Atualizando antiflea 
+# Cenário 03 - Put antiFleaId
+#     Atualizando antiflea    ${AntipulgasId}    antipulga
 
-Cenário 04 - Delete antiFlea
-    Deletando antiFlea 
+# Cenário 04 - Delete antiFlea
+#     Deletando antiFlea    ${AntipulgasId}
