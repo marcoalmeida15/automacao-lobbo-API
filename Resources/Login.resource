@@ -5,18 +5,21 @@ Library    Collections
 Library    OperatingSystem
 
 *** Variables ***
-${server}    http://54.233.135.201:8080/lobbo    
-${password}     123456789 
+${server}                 http://54.233.135.201:8080/lobbo    
+${Email_tutor}            Marco.toto123@icloud.com
+${Password_tutor}         12345@Kk 
+${Email_veterinario}      netoye2222@muzitp.com
+${Password_veterinario}   433@mA  
 
 *** Keywords ***
 Criando id para tutor
     Create Session    alias=Lobbo    url=${server} 
     ${header}    Create Dictionary    Content-Type=application/json
-    ${data}    Create Dictionary      email=Roberto20@gmail.com    password=12345@Kk    typeUser=GUARDIAN
+    ${data}    Create Dictionary      email=${Email_tutor}    password=${Password_tutor}    typeUser=GUARDIAN
     ${response}    POST On Session    alias=Lobbo   url=/login   headers=${header}    json=${data}    expected_status=200
 
 Criando id para veterinário
     Create Session    alias=Lobbo    url=${server} 
     ${header}    Create Dictionary    Content-Type=application/json
-    ${data}    Create Dictionary      email=marcu15@gmail.com    password=433@mA    typeUser=VETERINARY
+    ${data}    Create Dictionary      email=${Email_veterinario}    password=${Password_veterinario}   typeUser=VETERINARY
     ${response}    POST On Session    alias=Lobbo   url=/login   headers=${header}    json=${data}    expected_status=200

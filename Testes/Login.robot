@@ -1,5 +1,6 @@
 *** Settings ***
 Resource            ../Resources/Login.resource
+Resource            ../Resources/User.resource
 
 *** Test Cases ***
 Cenário 01 - Create GuardianId
