@@ -13,9 +13,23 @@ ${AlimentationSizeId}    17
 *** Keywords ***
 Criando alimentação
     Create Session    alias=Lobbo    url=${server} 
-    ${header}    Create Dictionary    Accept=application/json    Authorization=${token}    
-    ${data}      Create Dictionary      alimentationSizeId=17    buy=2023-06-12    dailyDose=uma pílula    hour=14:00    petId=${petId}    product=ração    receiveNotification=true
-    ${response}    POST On Session    alias=Lobbo   url=/alimentation   headers=${header}    json=${data}    expected_status=200
+
+    ${header}    Create Dictionary    Accept=application/json    Authorization=${token}
+
+    ${data}    Create Dictionary
+...    alimentationSizeId=17
+...    buy=2023-06-12
+...    dailyDose=uma pílula
+...    hour=14:00
+...    petId=${petId}
+...    product=ração
+...    receiveNotification=true
+
+    ${response}    POST On Session    alias=Lobbo    url=/alimentation
+...    headers=${header}
+...    json=${data}
+...    expected_status=200
+
     Set Suite Variable    ${alimentationId}    ${response.json().get("alimentationId")}
 
 Atualizando alimentação
