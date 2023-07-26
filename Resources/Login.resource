@@ -5,7 +5,7 @@ Library    Collections
 Library    OperatingSystem
 
 *** Variables ***
-${server}                 http://54.233.135.201:8080/lobbo    
+${server}                 http://54.207.181.205:8080/lobbo    
 ${Email_tutor}            Marco.toto123@icloud.com
 ${Password_tutor}         12345@Kk 
 ${Email_veterinario}      netoye2222@muzitp.com

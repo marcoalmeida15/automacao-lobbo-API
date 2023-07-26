@@ -5,7 +5,7 @@ Library    Collections
 Resource    ../Resources/AlimentationforPet.resource
 
 *** Variables ***
-${server}                http://54.233.135.201:8080/lobbo   
+${server}                http://54.207.181.205:8080/lobbo   
 ${token}                 Bearer    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJ1c2VySWRcIjoxNyxcImVtYWlsXCI6XCJNYXJjby50b3RvMTIzQGljbG91ZC5jb21cIixcIm5hbWVcIjpcIk1hcmN1XCIsXCJ0eXBlVXNlclwiOlwiR1VBUkRJQU5cIn0iLCJ1c2VySWQiOjE3LCJ1c2VyIjoie1widXNlcklkXCI6MTcsXCJlbWFpbFwiOlwiTWFyY28udG90bzEyM0BpY2xvdWQuY29tXCIsXCJuYW1lXCI6XCJNYXJjdVwiLFwidHlwZVVzZXJcIjpcIkdVQVJESUFOXCJ9IiwiaWF0IjoxNjg4NzY2MDk4fQ.VPpQoTKnv-tv7RSqQ86fVzKfk7_vL475d1BXUgBhkWiX2rrWQhgq8fogztrlQDWgk2ZnbrHl3nQ9TitXiXVopA
 
 *** Keywords ***
